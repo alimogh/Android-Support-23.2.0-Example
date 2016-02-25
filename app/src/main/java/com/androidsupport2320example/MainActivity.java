@@ -7,32 +7,67 @@ import android.support.design.widget.Snackbar;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
+
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
     private FloatingActionButton floatingActionButton;
+    private Random random = new Random();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+
+        setContentView(R.layout.fab_alway_broken);
+        //setContentView(R.layout.fab_sometimes_broken);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        FloatingActionButton floatingActionButton = (FloatingActionButton) findViewById(R.id.fab);
+        final FloatingActionButton floatingActionButton = (FloatingActionButton) findViewById(R.id.fab);
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                final int randomColor = random.nextInt(4);
+
+                int color;
+                String colorString;
+
+                switch (randomColor) {
+                    case 0:
+                        color = ContextCompat.getColor(MainActivity.this, R.color.amber_900);
+                        colorString = "AMBER";
+                        break;
+                    case 1:
+                        color = ContextCompat.getColor(MainActivity.this, R.color.light_green_A200);
+                        colorString = "GREEN";
+                        break;
+                    case 2:
+                        color = ContextCompat.getColor(MainActivity.this, R.color.brown_600);
+                        colorString = "BROWN";
+                        break;
+                    default:
+                        color = ContextCompat.getColor(MainActivity.this, R.color.blue_700);
+                        colorString = "BLUE";
+                        break;
+                }
+
+                floatingActionButton.setBackgroundTintList(ColorStateList.valueOf(color));
+
+                final Toast toast = Toast.makeText(MainActivity.this, "Color should be " + colorString, Toast.LENGTH_SHORT);
+                toast.setGravity(Gravity.CENTER, 0, 0);
+                toast.show();
             }
         });
 
-        floatingActionButton.setBackgroundTintList(ColorStateList.valueOf(ContextCompat.getColor(this, R.color.floatingActionButton)));
+        floatingActionButton.setBackgroundTintList(ColorStateList.valueOf(ContextCompat.getColor(this, R.color.amber_900)));
     }
 
     @Override

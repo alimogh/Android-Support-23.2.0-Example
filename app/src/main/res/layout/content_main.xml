@@ -11,7 +11,7 @@
     android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.androidsupport2320example.MainActivity"
-    tools:showIn="@layout/activity_main">
+    tools:showIn="@layout/fab_alway_broken">
 
     <TextView
         android:layout_width="wrap_content"
@@ -26,5 +26,5 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Issue #201873 - FloatingActionButton should be orange. Is orange if you remove 'app:backgroundTint' from layout" />
+        android:text="Issue #201873 - FloatingActionButton should not be pink. Is sometimes not pink if you remove 'app:backgroundTint' from layout" />
 </LinearLayout>

@@ -4,5 +4,9 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
-    <color name="floatingActionButton">#FF8F00</color>
+    <color name="amber_900">#FF6F00</color>
+    <color name="light_green_A200">#B2FF59</color>
+    <color name="brown_600">#6D4C41</color>
+    <color name="blue_700">#1976D2</color>
+
 </resources>
