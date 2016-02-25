@@ -17,14 +17,38 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Issue #20185 - Title text is white but buttons are black. Buttons used to be white" />
+        android:textStyle="bold"
+        android:text="@string/title_201851" />
 
     <android.support.v4.widget.Space
         android:layout_width="8dp"
         android:layout_height="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/description_201851" />
+
+    <android.support.v4.widget.Space
+        android:layout_width="16dp"
+        android:layout_height="16dp" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Issue #201873 - FloatingActionButton should not be pink. Is sometimes not pink if you remove 'app:backgroundTint' from layout" />
+        android:textStyle="bold"
+        android:text="@string/title_201873" />
+
+    <android.support.v4.widget.Space
+        android:layout_width="8dp"
+        android:layout_height="8dp" />
+
+    <TextView
+        android:id="@+id/textview_201873"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/description_201873" />
 </LinearLayout>
