@@ -128,10 +128,12 @@
         android:layout_width="16dp"
         android:layout_height="16dp" />
 
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="75dp"
         android:orientation="horizontal"
+        style="?android:attr/buttonBarStyle"
         >
 
         <Button
@@ -140,6 +142,7 @@
             android:layout_weight="1"
             android:layout_height="match_parent"
             android:text="#1 - Vector"
+            android:textColor="@color/red_500"
             />
 
         <Button
@@ -148,7 +151,17 @@
             android:layout_weight="1"
             android:layout_height="match_parent"
             android:text="#2 - Layer List"
+            android:textColor="@color/red_500"
             />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:orientation="horizontal"
+        style="?android:attr/buttonBarStyle"
+        >
 
         <Button
             android:id="@+id/button_show_notification_layer_list_with_srccompat"
@@ -156,6 +169,7 @@
             android:layout_weight="1"
             android:layout_height="match_parent"
             android:text="#3 - Layer List w/ srcCompat"
+            android:textColor="@color/red_500"
             />
 
         <Button
@@ -164,13 +178,14 @@
             android:layout_weight="1"
             android:layout_height="match_parent"
             android:text="#4 PNG"
+            android:textColor="@color/green_700"
             />
 
     </LinearLayout>
 
     <android.support.v4.widget.Space
-        android:layout_width="160dp"
-        android:layout_height="160dp" />
+        android:layout_width="match_parent"
+        android:layout_height="75dp" />
 
 </LinearLayout>
 
