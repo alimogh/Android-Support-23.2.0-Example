@@ -61,6 +61,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        findViewById(R.id.button_show_notification_png).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showNotification(R.drawable.icon);
+            }
+        });
+
         findViewById(R.id.button_show_notification_vector).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

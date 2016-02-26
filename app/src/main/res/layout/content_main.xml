@@ -158,6 +158,14 @@
             android:text="#3 - Layer List w/ srcCompat"
             />
 
+        <Button
+            android:id="@+id/button_show_notification_png"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="#4 PNG"
+            />
+
     </LinearLayout>
 
     <android.support.v4.widget.Space
