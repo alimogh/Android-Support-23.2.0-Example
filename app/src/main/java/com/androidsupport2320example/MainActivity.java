@@ -1,10 +1,14 @@
 package com.androidsupport2320example;
 
+import android.app.Notification;
+import android.app.NotificationManager;
 import android.content.res.ColorStateList;
 import android.os.Bundle;
+import android.support.annotation.DrawableRes;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.app.NotificationCompat;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
@@ -42,6 +46,27 @@ public class MainActivity extends AppCompatActivity {
         textView_201873_color = (TextView) findViewById(R.id.textview_201873_color);
 
         setRandomFloatingActionButtonBackgroundColor();
+
+        findViewById(R.id.button_show_notification_layer_list).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showNotification(R.drawable.ic_warning_wrapped);
+            }
+        });
+
+        findViewById(R.id.button_show_notification_layer_list_with_srccompat).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showNotification(R.drawable.ic_warning_wrapped_srccompat);
+            }
+        });
+
+        findViewById(R.id.button_show_notification_vector).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showNotification(R.drawable.ic_warning);
+            }
+        });
     }
 
     // region Nothing to see here...
@@ -95,6 +120,23 @@ public class MainActivity extends AppCompatActivity {
         }
 
         floatingActionButton.setBackgroundTintList(ColorStateList.valueOf(color));
+
         textView_201873_color.setText(colorString);
+        textView_201873_color.setTextColor(color);
+    }
+
+    private void showNotification(@DrawableRes int drawableId) {
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(MainActivity.this);
+        Notification notification = builder
+                .setAutoCancel(true)
+                .setContentText("I'm a notification!")
+                .setContentTitle("Support 23.2.0 Issues")
+                .setSmallIcon(drawableId)
+                .build();
+
+        final int notificationId = 001;
+        final NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+        notificationManager.notify(notificationId, notification);
+
     }
 }

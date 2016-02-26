@@ -4,8 +4,14 @@ android {
     compileSdkVersion 23
     buildToolsVersion "23.0.1"
 
+    // Issue #201851 - Remove the "aaptOptions" section to cause the issue
+    aaptOptions {
+        additionalParameters "--no-version-vectors"
+    }
     defaultConfig {
         applicationId "com.androidsupport2320example"
+        // Issue #201851 - Remove "generatedDensities = []" to cause the issue
+        generatedDensities = []
         minSdkVersion 11
         targetSdkVersion 23
         versionCode 1
@@ -24,4 +30,5 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.2.0'
     compile 'com.android.support:design:23.2.0'
+    //compile 'com.android.support:support-vector-drawable:23.2.0'
 }

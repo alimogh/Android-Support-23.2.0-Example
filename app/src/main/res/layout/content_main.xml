@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.androidsupport2320example.MainActivity"
+    tools:showIn="@layout/fab_alway_broken">
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -13,11 +24,13 @@
     tools:context="com.androidsupport2320example.MainActivity"
     tools:showIn="@layout/fab_alway_broken">
 
+
+    <!-- Issue #201851 -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:drawableEnd="@drawable/arrow_up_bold"
-        android:drawableRight="@drawable/arrow_up_bold"
+        android:drawableEnd="@drawable/arrow_up_bold_wrapped"
+        android:drawableRight="@drawable/arrow_up_bold_wrapped"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textStyle="bold"
         android:text="@string/title_201851" />
@@ -37,11 +50,12 @@
         android:layout_width="16dp"
         android:layout_height="16dp" />
 
+    <!-- Issue #201873 -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:drawableEnd="@drawable/arrow_down_bold"
-        android:drawableRight="@drawable/arrow_down_bold"
+        android:drawableEnd="@drawable/arrow_down_bold_wrapped"
+        android:drawableRight="@drawable/arrow_down_bold_wrapped"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textStyle="bold"
         android:text="@string/title_201873" />
@@ -89,4 +103,67 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/description_201873_2" />
 
+    <android.support.v4.widget.Space
+        android:layout_width="8dp"
+        android:layout_height="8dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textStyle="bold"
+        android:text="@string/title_201958" />
+
+    <android.support.v4.widget.Space
+        android:layout_width="8dp"
+        android:layout_height="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/description_201958" />
+
+    <android.support.v4.widget.Space
+        android:layout_width="16dp"
+        android:layout_height="16dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/button_show_notification_vector"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="#1 - Vector"
+            />
+
+        <Button
+            android:id="@+id/button_show_notification_layer_list"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="#2 - Layer List"
+            />
+
+        <Button
+            android:id="@+id/button_show_notification_layer_list_with_srccompat"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="#3 - Layer List w/ srcCompat"
+            />
+
+    </LinearLayout>
+
+    <android.support.v4.widget.Space
+        android:layout_width="160dp"
+        android:layout_height="160dp" />
+
 </LinearLayout>
+
+</ScrollView>
