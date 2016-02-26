@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Android Support 23.2.0 Example</string>
-    <string name="action_settings">Settings</string>
-    <string name="description_201851">Title text is white but buttons are black. Buttons used to be white</string>
+    <string name="action_settings">Don\'t click me!</string>
+    <string name="description_201851">Toolbar title text is white but icons are black.\r\n\r\nIcons used to be white.</string>
     <string name="description_201873">FloatingActionButton should be %1$s.\r\n\r\nIt works sometimes if you remove \'app:backgroundTint\' from layout</string>
     <string name="title_201851">Issue #201851</string>
     <string name="title_201873">Issue #201873</string>

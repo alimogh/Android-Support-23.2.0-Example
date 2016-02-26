@@ -14,8 +14,10 @@
     tools:showIn="@layout/fab_alway_broken">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:drawableEnd="@drawable/arrow_up_bold"
+        android:drawableRight="@drawable/arrow_up_bold"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textStyle="bold"
         android:text="@string/title_201851" />
@@ -35,8 +37,10 @@
         android:layout_height="16dp" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:drawableEnd="@drawable/arrow_down_bold"
+        android:drawableRight="@drawable/arrow_down_bold"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textStyle="bold"
         android:text="@string/title_201873" />
