@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textStyle="bold"
+        android:text="@string/title_201958" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/description_201958" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:orientation="horizontal"
+        style="?android:attr/buttonBarStyle"
+        >
+
+        <Button
+            android:id="@+id/button_show_notification_vector"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="@string/issue_201958_button_1"
+            android:textColor="@color/red_500"
+            />
+
+        <Button
+            android:id="@+id/button_show_notification_layer_list"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="@string/issue_201958_button_2"
+            android:textColor="@color/red_500"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:orientation="horizontal"
+        style="?android:attr/buttonBarStyle"
+        >
+
+        <Button
+            android:id="@+id/button_show_notification_layer_list_with_srccompat"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="@string/issue_201958_button_3"
+            android:textColor="@color/red_500"
+            />
+
+        <Button
+            android:id="@+id/button_show_notification_png"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="@string/issue_201958_button_4"
+            android:textColor="@color/green_700"
+            />
+
+    </LinearLayout>
+
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="75dp" />
+
+</LinearLayout>

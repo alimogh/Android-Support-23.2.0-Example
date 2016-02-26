@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.fab_alway_broken);
+        setContentView(R.layout.fab_always_broken);
         //setContentView(R.layout.fab_sometimes_broken);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);

@@ -8,4 +8,8 @@
     <string name="title_201851">Issue #201851</string>
     <string name="title_201873">Issue #201873</string>
     <string name="title_201958">Issue #201958</string>
+    <string name="issue_201958_button_1">#1 - Vector</string>
+    <string name="issue_201958_button_2">#2 - Layer List</string>
+    <string name="issue_201958_button_3">#3 - Layer List w/ srcCompat</string>
+    <string name="issue_201958_button_4">#4 PNG</string>
 </resources>
