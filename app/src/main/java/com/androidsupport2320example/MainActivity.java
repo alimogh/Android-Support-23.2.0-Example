@@ -3,18 +3,14 @@ package com.androidsupport2320example;
 import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Gravity;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import org.w3c.dom.Text;
 
 import java.util.Random;
 
@@ -22,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
     private FloatingActionButton floatingActionButton;
     private Random random = new Random();
-    private TextView textView;
+    private TextView textView_201873_color;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        textView = (TextView) findViewById(R.id.textview_201873);
+        textView_201873_color = (TextView) findViewById(R.id.textview_201873_color);
 
         setRandomFloatingActionButtonBackgroundColor();
     }
@@ -99,6 +95,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
         floatingActionButton.setBackgroundTintList(ColorStateList.valueOf(color));
-        textView.setText(getString(R.string.description_201873, colorString));
+        textView_201873_color.setText(colorString);
     }
 }

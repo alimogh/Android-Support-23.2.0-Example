@@ -27,6 +27,7 @@
         android:layout_height="8dp" />
 
     <TextView
+        android:id="@+id/textview_201851"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
@@ -49,10 +50,43 @@
         android:layout_width="8dp"
         android:layout_height="8dp" />
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:id="@+id/textview_201873_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/description_201873_1" />
+
+        <android.support.v4.widget.Space
+            android:layout_width="4dp"
+            android:layout_height="4dp" />
+
+        <TextView
+            android:id="@+id/textview_201873_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold|italic"
+            tools:text="PINK"
+            />
+
+    </LinearLayout>
+
+    <android.support.v4.widget.Space
+        android:layout_width="8dp"
+        android:layout_height="8dp" />
+
     <TextView
-        android:id="@+id/textview_201873"
+        android:id="@+id/textview_201873_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/description_201873" />
+        android:text="@string/description_201873_2" />
+
 </LinearLayout>

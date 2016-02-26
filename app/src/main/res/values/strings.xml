@@ -1,8 +1,9 @@
 <resources>
     <string name="app_name">Android Support 23.2.0 Example</string>
     <string name="action_settings">Don\'t click me!</string>
-    <string name="description_201851">Toolbar title text is white but icons are black.\r\n\r\nIcons used to be white.</string>
-    <string name="description_201873">FloatingActionButton should be %1$s.\r\n\r\nIt works sometimes if you remove \'app:backgroundTint\' from layout</string>
+    <string name="description_201851">Toolbar title text is white but icons are <b>black</b>.\r\n\r\nIcons used to be <b>white</b> in this theme:\r\n\r\n<u>ThemeOverlay.AppCompat.Dark.ActionBar</u>.</string>
+    <string name="description_201873_1">FloatingActionButton should be: </string>
+    <string name="description_201873_2">It works sometimes if you remove \'app:backgroundTint\' from layout (see R.layout.fab_sometimes_broken)</string>
     <string name="title_201851">Issue #201851</string>
     <string name="title_201873">Issue #201873</string>
 </resources>
