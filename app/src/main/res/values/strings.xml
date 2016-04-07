@@ -1,15 +1,8 @@
 <resources>
     <string name="app_name">Android Support 23.2.0 Example</string>
     <string name="action_settings">Don\'t click me!</string>
-    <string name="description_201851">Toolbar title text is white but icons are <b>black</b>.\r\n\r\nIcons used to be <b>white</b> in this theme:\r\n\r\n<u>ThemeOverlay.AppCompat.Dark.ActionBar</u>.\r\n\r\n<b>See notes in build.gradle to reproduce.</b></string>
-    <string name="description_201873_1">FloatingActionButton should be: </string>
-    <string name="description_201873_2">It works sometimes if you remove \'app:backgroundTint\' from layout (see R.layout.fab_sometimes_broken)</string>
     <string name="description_201958">Making the changes to the build.gradle to fix issue #201851 makes notifications break.\r\n\r\nPreviously the generated PNGs would be used for the notification icon. To fix issue #201851 the PNGs are no longer generate which should be fine because we can wrap a vector in another drawable as shown in the headers above.\r\n\r\nUnfortunately wrapping the vectors in a layer-list does not work for the notification as show by the buttons below (only #2 and #4 should work on pre-lollipop devices, #3 is and invalid drawable I believe [was throwing darts]).</string>
-    <string name="title_201851">Issue #201851</string>
-    <string name="title_201873">Issue #201873</string>
     <string name="title_201958">Issue #201958</string>
-    <string name="issue_201958_button_1">#1 - Vector</string>
-    <string name="issue_201958_button_2">#2 - Layer List</string>
-    <string name="issue_201958_button_3">#3 - Layer List w/ srcCompat</string>
-    <string name="issue_201958_button_4">#4 PNG</string>
+    <string name="issue_201958_button_1">#1 - Set wrapped vector</string>
+    <string name="issue_201958_button_2">#2 - Set vector</string>
 </resources>

@@ -9,7 +9,7 @@
     android:fillViewport="true"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.androidsupport2320example.MainActivity"
-    tools:showIn="@layout/fab_always_broken"
+    tools:showIn="@layout/activity_main"
     >
 
     <LinearLayout
@@ -21,12 +21,6 @@
         android:paddingTop="@dimen/activity_vertical_margin"
         android:orientation="vertical"
         >
-
-        <!-- Issue #201851 -->
-        <include layout="@layout/issue_201851" />
-
-        <!-- Issue #201873 -->
-        <include layout="@layout/issue_201873" />
 
         <!-- Issue #201958 -->
         <include layout="@layout/issue_201958" />

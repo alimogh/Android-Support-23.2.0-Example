@@ -13,6 +13,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,50 +29,25 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.fab_always_broken);
+        setContentView(R.layout.activity_main);
         //setContentView(R.layout.fab_sometimes_broken);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        floatingActionButton = (FloatingActionButton) findViewById(R.id.fab);
-        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+
+        findViewById(R.id.button_set_wrapped).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                setRandomFloatingActionButtonBackgroundColor();
+            public void onClick(View v) {
+                ((FloatingActionButton)findViewById(R.id.fab)).setImageResource(R.drawable.ic_warning_wrapped);
             }
         });
 
-        textView_201873_color = (TextView) findViewById(R.id.textview_201873_color);
-
-        setRandomFloatingActionButtonBackgroundColor();
-
-        findViewById(R.id.button_show_notification_layer_list).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.button_set_wrapped).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showNotification(R.drawable.ic_warning_wrapped);
-            }
-        });
-
-        findViewById(R.id.button_show_notification_layer_list_with_srccompat).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showNotification(R.drawable.ic_warning_wrapped_srccompat);
-            }
-        });
-
-        findViewById(R.id.button_show_notification_png).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showNotification(R.drawable.icon);
-            }
-        });
-
-        findViewById(R.id.button_show_notification_vector).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showNotification(R.drawable.ic_warning);
+                ((FloatingActionButton)findViewById(R.id.fab)).setImageResource(R.drawable.ic_warning);
             }
         });
     }
@@ -100,37 +76,6 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
     // endregion
-
-    private void setRandomFloatingActionButtonBackgroundColor() {
-        final int randomColor = random.nextInt(4);
-
-        int color;
-        String colorString;
-
-        switch (randomColor) {
-            case 0:
-                color = ContextCompat.getColor(MainActivity.this, R.color.amber_900);
-                colorString = "AMBER";
-                break;
-            case 1:
-                color = ContextCompat.getColor(MainActivity.this, R.color.light_green_A200);
-                colorString = "GREEN";
-                break;
-            case 2:
-                color = ContextCompat.getColor(MainActivity.this, R.color.brown_600);
-                colorString = "BROWN";
-                break;
-            default:
-                color = ContextCompat.getColor(MainActivity.this, R.color.blue_700);
-                colorString = "BLUE";
-                break;
-        }
-
-        floatingActionButton.setBackgroundTintList(ColorStateList.valueOf(color));
-
-        textView_201873_color.setText(colorString);
-        textView_201873_color.setTextColor(color);
-    }
 
     private void showNotification(@DrawableRes int drawableId) {
         NotificationCompat.Builder builder = new NotificationCompat.Builder(MainActivity.this);
